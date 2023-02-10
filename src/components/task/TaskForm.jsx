@@ -50,10 +50,10 @@ const TaskForm = () => {
   }, [])
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type='text' name='title' placeholder='title' onChange={handleChange} defaultValue={task.title} />
-      <textarea name='description' placeholder='description' onChange={handleChange} defaultValue={task.description} />
-      <button>Save</button>
+    <form onSubmit={handleSubmit} className='flex flex-col gap-y-4'>
+      <input type='text' name='title' placeholder='title' onChange={handleChange} defaultValue={task.title} className='border-2 border-gray-200' />
+      <textarea name='description' placeholder='description' onChange={handleChange} defaultValue={task.description} className='border-2 border-gray-200' />
+      <button className='bg-indigo-500 py-1 text-white font-medium' onlyOn>Save</button>
 
       {redirect && <div>Redirigiendo...</div>}
     </form>

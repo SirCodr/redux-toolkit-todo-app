@@ -6,15 +6,17 @@ import Layout from './components/Layout'
 
 function App () {
   return (
-    <div className='App'>
+    <div className='flex flex-col items-center w-wull h-screen'>
       <BrowserRouter>
         <Layout>
-          <Routes>
-            <Route path='/' element={<Welcome />} />
-            <Route path='task' element={<TaskList />} />
-            <Route path='task/new' element={<TaskForm />} />
-            <Route path='task/edit/:id' element={<TaskForm />} />
-          </Routes>
+          <main className='w-full h-full max-w-xl'>
+            <Routes>
+              <Route path='/' element={<Welcome />} />
+              <Route path='task' element={<TaskList />} />
+              <Route path='task/new' element={<TaskForm />} />
+              <Route path='task/edit/:id' element={<TaskForm />} />
+            </Routes>
+          </main>
         </Layout>
       </BrowserRouter>
     </div>
